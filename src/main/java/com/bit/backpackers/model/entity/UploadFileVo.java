@@ -4,13 +4,13 @@ public class UploadFileVo {
 	
 	private Long id;
 	
-	private String fileName;                //예류.jpg
+	private String filename;                //예류.jpg
 	
-	private String saveFileName;            //uuid예류.jpg
+	private String savefilename;            //uuid예류.jpg
 	
-	private String filePath;                // D:/image/uuid예류.jpg
+	private String filepath;                // D:/image/uuid예류.jpg
 	
-	private String contentType;             // image/jpeg
+	private String contentyype;             // image/jpeg
 	
 	private long size;                      // 4476873 (byte)
 
@@ -22,36 +22,36 @@ public class UploadFileVo {
 		this.id = id;
 	}
 
-	public String getFileName() {
-		return fileName;
+	public String getFilename() {
+		return filename;
 	}
 
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 
-	public String getSaveFileName() {
-		return saveFileName;
+	public String getSavefilename() {
+		return savefilename;
 	}
 
-	public void setSaveFileName(String saveFileName) {
-		this.saveFileName = saveFileName;
+	public void setSavefilename(String savefilename) {
+		this.savefilename = savefilename;
 	}
 
-	public String getFilePath() {
-		return filePath;
+	public String getFilepath() {
+		return filepath;
 	}
 
-	public void setFilePath(String filePath) {
-		this.filePath = filePath;
+	public void setFilepath(String filepath) {
+		this.filepath = filepath;
 	}
 
-	public String getContentType() {
-		return contentType;
+	public String getContentyype() {
+		return contentyype;
 	}
 
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
+	public void setContentyype(String contentyype) {
+		this.contentyype = contentyype;
 	}
 
 	public long getSize() {
@@ -65,15 +65,18 @@ public class UploadFileVo {
 	public UploadFileVo() {
 		// TODO Auto-generated constructor stub
 	}
-	public UploadFileVo(Long id, String fileName, String saveFileName, String filePath, String contentType, long size) {
+	
+	public UploadFileVo(Long id, String filename, String savefilename, String filepath, String contentyype, long size) {
 		super();
 		this.id = id;
-		this.fileName = fileName;
-		this.saveFileName = saveFileName;
-		this.filePath = filePath;
-		this.contentType = contentType;
+		this.filename = filename;
+		this.savefilename = savefilename;
+		this.filepath = filepath;
+		this.contentyype = contentyype;
 		this.size = size;
 	}
+
+	
 	
 	
 }

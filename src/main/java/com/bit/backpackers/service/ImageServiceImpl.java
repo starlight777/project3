@@ -34,7 +34,7 @@ public class ImageServiceImpl implements ImageService{
 	ImageDao imageDao;
 	
 	//Path rootLocation; // d:/image/
-	String rootLocation = "c:/image/";
+	String rootLocation = "c:/image";
 
 	
 	
@@ -53,11 +53,11 @@ public class ImageServiceImpl implements ImageService{
 			
 			String saveFileName = fileSave(rootLocation.toString(), file);           
 			UploadFileVo saveFile = new UploadFileVo();
-			saveFile.setFileName(file.getOriginalFilename());
-			saveFile.setSaveFileName(saveFileName);
-			saveFile.setContentType(file.getContentType());
+			saveFile.setFilename(file.getOriginalFilename());
+			saveFile.setSavefilename(saveFileName);
+			saveFile.setContentyype(file.getContentType());
 			saveFile.setSize(file.getSize());
-			saveFile.setFilePath(rootLocation.toString().replace(File.separatorChar, '/') +'/' + saveFileName);   
+			saveFile.setFilepath(rootLocation.toString().replace(File.separatorChar, '/') +'/' + saveFileName);   
 			imageDao.saveUploadfile(saveFile);
 			return saveFile;
 			

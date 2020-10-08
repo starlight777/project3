@@ -31,8 +31,8 @@ public class ImageController {
 		try { 
 			UploadFileVo uploadFile = imageService.store(file);           
 			System.out.println("uploadFile.getId()="+uploadFile.getId());
-			return null;
-			//return ResponseEntity.ok().body("/image/" + uploadFile.getId());
+			//return null;
+			return ResponseEntity.ok().body("/backpackers/gear/image/" + uploadFile.getId());
 		} catch(Exception e) {
 			e.printStackTrace();
 			return ResponseEntity.badRequest().build();
@@ -43,7 +43,7 @@ public class ImageController {
 	public ResponseEntity<?> serveFile(@PathVariable Long fileId){
 		try {
 			UploadFileVo uploadFile = imageService.load(fileId);
-			Resource resource = resourceLoader.getResource("file:" + uploadFile.getFilePath());
+			Resource resource = resourceLoader.getResource("file:" + uploadFile.getFilepath());
 			return ResponseEntity.ok().body(resource);
 		} catch(Exception e) {
 			e.printStackTrace();

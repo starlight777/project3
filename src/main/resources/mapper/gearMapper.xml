@@ -29,8 +29,8 @@
 		 FROM uploadfile
 		 WHERE id=#{id}
   	</select>
-  	<insert id="saveUploadfile">
-  		 <selectKey resultType="string" keyProperty="id" order="BEFORE">
+  	<insert id="saveUploadfile" parameterType="com.bit.backpackers.model.entity.UploadFileVo">
+  		 <selectKey resultType="long" keyProperty="id" order="BEFORE">
 	        SELECT ifnull(MAX(id),0)+1 FROM uploadfile;    
 	    </selectKey> 
 	    INSERT INTO uploadfile(
@@ -38,14 +38,12 @@
 					    ,filename
 					    ,savefilename
 					    ,filepath
-					    ,contenttype
 					    ,size)
 						VALUES(
 						#{id}
 						,#{filename}
 						,#{savefilename}
 						,#{filepath}
-						,#{contenttype}
 						,#{size})
   	</insert>
   </mapper>

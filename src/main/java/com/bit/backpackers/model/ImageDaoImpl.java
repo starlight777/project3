@@ -14,12 +14,12 @@ public class ImageDaoImpl implements ImageDao{
 	
 	@Override
 	public UploadFileVo selectbyid(Long fileId) {
-		return sqlsession.selectOne("gear.imageselectfileid", fileId);
+		return sqlsession.selectOne("com.bit.backpackers.model.GearDao.imageselectfileid", fileId);
 	}
 
 	@Override
 	public void saveUploadfile(UploadFileVo saveFile) {
-		sqlsession.insert("gear.saveUploadfile",saveFile);
+		sqlsession.insert("com.bit.backpackers.model.GearDao.saveUploadfile",saveFile);
 	}
 
 }
