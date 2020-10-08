@@ -18,4 +18,34 @@
   	<delete id="deleteOne">
   		delete from gear where gearNo=#{gearNo}
   	</delete>
+  	<select id="imageselectfileid" resultType="com.bit.backpackers.model.entity.UploadFileVo">
+  		SELECT 
+			id
+			,filename
+			,savefilename
+			,filepath
+			,contenttype
+			,size
+		 FROM uploadfile
+		 WHERE id=#{id}
+  	</select>
+  	<insert id="saveUploadfile">
+  		 <selectKey resultType="string" keyProperty="id" order="BEFORE">
+	        SELECT ifnull(MAX(id),0)+1 FROM uploadfile;    
+	    </selectKey> 
+	    INSERT INTO uploadfile(
+					    id
+					    ,filename
+					    ,savefilename
+					    ,filepath
+					    ,contenttype
+					    ,size)
+						VALUES(
+						#{id}
+						,#{filename}
+						,#{savefilename}
+						,#{filepath}
+						,#{contenttype}
+						,#{size})
+  	</insert>
   </mapper>
