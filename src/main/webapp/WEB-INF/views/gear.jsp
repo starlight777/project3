@@ -23,20 +23,20 @@
     <small>백패킹, 어떻게 할까요?</small>
   </h1>
 	
-	<p><a href="/add" class="btn btn-primary btn-block" role="btn">글쓰기 </a></p>
+	<p><a href="./add" class="btn btn-primary btn-block" role="btn">글쓰기 </a></p>
 	
   <div class="row">
    
     <c:forEach items="${list }" var="bean">
     <div class="col-lg-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        
+<!--         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+        	<a href="#"><img class="card-img-top" src="https://adventures.com/media/4566/cow-t-hiking-forest-path-hike-winter-1-1.jpg?center=0.38395904436860068,0.5&mode=crop&width=500&height=400&rnd=132070710360000000&quality=100&format=jpg" alt=""></a>
         <div class="card-body">       
           <h4 class="card-title">
             <a href="./gear/${bean.gearNo }">${bean.gearTitle }</a>
           </h4>
-          <p class="card-text">${bean.gearContent }</p>
+<!--          <p class="card-text">${bean.gearContent }</p> -->
           	
         </div>
       </div>

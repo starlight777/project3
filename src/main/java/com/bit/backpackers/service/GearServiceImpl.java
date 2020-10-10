@@ -30,7 +30,6 @@ public class GearServiceImpl implements GearService {
 		GearDao dao=sqlSession.getMapper(GearDao.class);
 		dao.insertOne(bean);
 		bean.setGearTitle("next)"+bean.getGearTitle());
-		dao.insertOne(bean);
 	}
 
 	@Override

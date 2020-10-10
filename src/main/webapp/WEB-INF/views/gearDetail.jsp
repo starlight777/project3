@@ -43,7 +43,7 @@
 	  height: 100%;
 	  width: 100%;
 	  background-color: black;
-	  opacity: 0.5;
+	  opacity: 0.0;
 	  z-index: 1;
 	}
 	
@@ -94,10 +94,10 @@
      
 <br>   </br>
 
-<a href="./${bean.gearNo }/edit" class="btn btn-default" role="btn">수정</a>
+<a href="./${bean.gearNo }/edit" class="btn btn-default" role="btn">수 정</a>
 <form method="post">
 <input type="hidden" name="_method" value="delete">
-<button type="submit" class="btn btn-default">삭제</button>
+<button type="submit" class="btn btn-default">삭 제</button>
 </form>
 
 					

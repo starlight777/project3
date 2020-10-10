@@ -37,8 +37,10 @@ public class GearController {
 		}
 		return "gear";
 	}
-	@RequestMapping("/add")
-	public void add() {}
+	@RequestMapping(value="/add",method = RequestMethod.GET)
+	public String add() {
+		return "gearAdd";
+	}
 	
 	@RequestMapping(value = "/{gearNo}",method=RequestMethod.GET)
 	public String detail(@PathVariable int gearNo,Model model) throws SQLException{
